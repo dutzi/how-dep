@@ -1,0 +1,60 @@
+{
+  "name": "how-dep",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack:build": "webpack dist/web/App.js --mode=production -o ./dist/web/bundle.js",
+    "webpack:watch": "npm run webpack:build -- --watch",
+    "build": "tsc && npm run webpack:build",
+    "build:watch": "tsc --watch",
+    "start": "concurrently \"npm:build:watch\" \"npm:webpack:watch\"",
+    "deploy": "npm run build && npm publish"
+  },
+  "bin": {
+    "how-dep": "dist/index.js"
+  },
+  "repository": {
+    "url": "https://github.com/dutzi/how-dep"
+  },
+  "devDependencies": {
+    "@phenomnomnominal/tsquery": "^4.0.0",
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^8.0.1",
+    "@types/node": "^13.1.1",
+    "@types/recursive-readdir": "^2.2.0",
+    "@types/yargs": "^13.0.4",
+    "chalk": "^3.0.0",
+    "ignore": "^5.1.4",
+    "typescript": "^3.7.4",
+    "yargs": "^15.0.2"
+  },
+  "author": "dutzi",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/openurl": "^1.0.0",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-helmet": "^5.0.14",
+    "@types/react-helmet-async": "^1.0.3",
+    "cli-pie": "^2.4.1",
+    "concurrently": "^5.0.2",
+    "fs-extra": "^8.1.0",
+    "lodash": "^4.17.15",
+    "openurl": "^1.1.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-helmet-async": "^1.0.4",
+    "styled-components": "^4.4.1",
+    "temp-dir": "^2.0.0",
+    "ts-morph": "^6.0.2"
+  },
+  "keywords": [
+    "dependencies",
+    "cli",
+    "analyze"
+  ]
+}
