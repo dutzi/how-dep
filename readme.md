@@ -13,9 +13,9 @@ $ yarn global add how-dep
 
 ```sh
 $ how-dep
-97	react         # react is imported 97 times
-55	react-i18next # react-i18next is imported 55 times
-47	classnames    # etc...
+97  react         # react is imported 97 times
+55  react-i18next # react-i18next is imported 55 times
+47  classnames    # etc...
 ...
 ```
 
@@ -47,8 +47,8 @@ If set to true, will includes all imports (not just 3rd party libraries) [defaul
 
 ```sh
 $ how-dep -a
-97	react                               # node module
-55	react-i18next                       # node module
+97  react                               # node module
+55  react-i18next                       # node module
 48  /example/src/hooks/use-current-user # local app module!
 ...
 ```
