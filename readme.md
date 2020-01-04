@@ -69,7 +69,7 @@ $ how-dep -f -l classnames
 
 ### --html, -h
 
-If set to true, will generate an HTML report [default: `false`]
+If set to true, will generate an HTML report ([example](https://dutzi.github.io/how-dep/example-report)) [default: `false`]
 
 ```sh
 $ how-dep -h
