@@ -1,4 +1,4 @@
-# ![How Dep](/logo.png)
+<img title="How-Dep" src="/logo.png" width="380">
 
 how-dep is a command line tool that analyzes your TypeScript<sup>1</sup> project and tells you which libraries you are most dependent on.
 
