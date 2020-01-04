@@ -45,20 +45,22 @@ export default function createHTMLReport(
   const html = ReactDOMServer.renderToString(
     sheet.collectStyles(
       <HelmetProvider context={helmetContext}>
-        <Helmet>
-          <script>
-            {fs.readFileSync(path.join(__dirname, '/web/bundle.js')).toString()}
-          </script>
-        </Helmet>
-        <Helmet>
-          <script>
-            {`window.__HOW_DEP = {
+        <script
+          dangerouslySetInnerHTML={{
+            __html: fs
+              .readFileSync(path.join(__dirname, '/web/bundle.js'))
+              .toString(),
+          }}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.__HOW_DEP = {
               importCounts: ${JSON.stringify(importCounterArray)},
               importLines: ${JSON.stringify(importLines)},
               packageName: ${JSON.stringify(packageName)}
-            }`}
-          </script>
-        </Helmet>
+            }`,
+          }}
+        ></script>
         <App
           importCounts={importCounterArray}
           importLines={importLines}
